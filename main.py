@@ -12,13 +12,14 @@ api_key = st.secrets["OPENROUTER_API_KEY"] if "OPENROUTER_API_KEY" in st.secrets
 client = openai.OpenAI(
     api_key=api_key,
     base_url="https://openrouter.ai/api/v1",
-    http_client=httpx.Client(
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "HTTP-Referer": "https://github.com/abiinavv/resume-critiquer",  # Replace with your GitHub URL
-            "X-Title": "AI Resume Critiquer"
-        }
-    )
+   http_client=httpx.Client(
+    headers={
+        "Authorization": f"Bearer {api_key}",
+        "HTTP-Referer": "https://resume-critiquer-5zcvi8qmd5b54l7aung8no.streamlit.app",
+        "X-Title": "AI Resume Critiquer"
+    }
+)
+
 )
 
 # Streamlit UI setup
